@@ -1,9 +1,10 @@
 <template name="editDrink">
   <h2>Edit Drink</h2>
 
-  <form class="edit-drink">
+  <form class="edit-drink form-inline">
     <input type="text" name="name" value="{{name}}" />
     <input type="hidden" name="id" value="{{_id}}" />
     <button type="submit" class="btn">Submit</button>
+    <a href="{{pathFor route='list_drinks'}}" class="btn btn-link">Cancel</a>
   </form>
 </template>

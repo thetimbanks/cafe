@@ -1,8 +1,9 @@
 <template name="addDrink">
   <h1>Add Drink</h1>
 
-  <form class="add-drink">
+  <form class="add-drink form-inline">
     <input name="name" type="text" placeholder="Drink name">
     <button type="submit" class="btn">Add Drink</button>
+    <a href="{{pathFor route='list_drinks'}}" class="btn btn-link">Cancel</a>
   </form>
 </template>
