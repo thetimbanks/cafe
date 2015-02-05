@@ -1,9 +1,9 @@
 <template name="menu">
-  <h1>Menu</h1>
+  <h2>Menu</h2>
 
   <ul>
     {{#each drinks}}
-    <li>{{name}}</li>
+    <li>{{name}} <a href="#" data-id="{{_id}}" class="btn order">order</a></li>
     {{/each}}
   </ul>
 </template>

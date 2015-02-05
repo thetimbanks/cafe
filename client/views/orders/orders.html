@@ -1,3 +1,9 @@
 <template name="orders">
-  <h1>Orders</h1>
+  <h2>Orders</h2>
+
+  <ul>
+    {{#each orders}}
+    <li>{{drink.name}} <a href="#" data-id="{{_id}}" class="btn finish">finish</a></li>
+    {{/each}}
+  </ul>
 </template>
