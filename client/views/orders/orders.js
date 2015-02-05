@@ -4,7 +4,9 @@ Template.orders.events({
       ready: true
     };
 
-    Meteor.call("update_order", $(event.target).data("id"), order_params);
+    Meteor.call("update_order", $(event.target).data("id"), order_params, function() {
+      FlashMessages.sendSuccess("The order has been completed");
+    });
 
     return false;
   }

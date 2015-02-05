@@ -4,8 +4,10 @@ Template.menu.events({
       drink: Drinks.findOne($(event.target).data("id")),
       ready: false
     };
-    
-    Meteor.call("add_order", order_params);
+
+    Meteor.call("add_order", order_params, function() {
+      FlashMessages.sendSuccess("Your drink has been ordered");
+    });
 
     return false;
   }
