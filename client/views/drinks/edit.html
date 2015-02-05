@@ -1,3 +1,9 @@
 <template name="editDrink">
-  <h1>Edit Drink</h1>
+  <h2>Edit Drink</h2>
+
+  <form class="edit-drink">
+    <input type="text" name="name" value="{{name}}" />
+    <input type="hidden" name="id" value="{{_id}}" />
+    <button type="submit" class="btn">Submit</button>
+  </form>
 </template>

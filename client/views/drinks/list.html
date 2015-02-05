@@ -1,0 +1,11 @@
+<template name="listDrinks">
+  <h1>Admin Drinks</h1>
+
+  <a href="{{pathFor route='add_drink'}}" class="btn">New Drink</a>
+
+  <ul>
+    {{#each drinks}}
+    <li>{{name}} <a href="{{pathFor route='edit_drink' _id=_id}}" class="btn">edit</a> <a href="#" data-id="{{_id}}" class="delete btn">delete</a></li>
+    {{/each}}
+  </ul>
+</template>

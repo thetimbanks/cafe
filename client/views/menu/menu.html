@@ -1,3 +1,9 @@
 <template name="menu">
   <h1>Menu</h1>
+
+  <ul>
+    {{#each drinks}}
+    <li>{{name}}</li>
+    {{/each}}
+  </ul>
 </template>
