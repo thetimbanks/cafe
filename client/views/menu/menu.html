@@ -7,7 +7,18 @@
     {{/each}}
   </ul>
 
+  {{> currentOrders}}
+
   {{> orderForm}}
+</template>
+
+<template name="currentOrders">
+  <h2>Your current orders</h2>
+  <ul>
+    {{#each orders}}
+    <li>{{drink.name}} {{#if ready}}Ready! <a href="#" data-id="{{_id}}" class="btn pickup">pick up</a>{{else}}Not ready yet{{/if}} </li>
+    {{/each}}
+  </ul>
 </template>
 
 <template name="orderForm">
@@ -28,7 +39,7 @@
       </div>
 
       <div class="modal-footer">
-        <button class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
         <button type="submit" class="btn btn-primary">Order</button>
       </div>
     </form>

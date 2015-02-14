@@ -1,9 +1,17 @@
 <template name="orders">
-  <h2>Orders</h2>
+  <h2>Current Orders</h2>
 
   <ul>
-    {{#each orders}}
+    {{#each currentOrders}}
     <li><img src="{{user_avatar}}" width="30" height="30" style="border-radius:50%"> {{drink.name}} <a href="#" data-id="{{_id}}" class="btn finish">finish</a></li>
+    {{/each}}
+  </ul>
+
+  <h2>Finished Orders</h2>
+
+  <ul>
+    {{#each finishedOrders}}
+    <li><img src="{{user_avatar}}" width="30" height="30" style="border-radius:50%"> {{drink.name}} <a href="#" data-id="{{_id}}" class="btn pickup">pick up</a></li>
     {{/each}}
   </ul>
 </template>
