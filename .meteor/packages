@@ -10,3 +10,7 @@ bootstrap
 meteorhacks:fast-render
 iron:router
 mrt:flash-messages
+accounts-base
+accounts-google
+accounts-ui
+service-configuration
