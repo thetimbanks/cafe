@@ -3,7 +3,7 @@
 
   <ul>
     {{#each orders}}
-    <li>{{drink.name}} <a href="#" data-id="{{_id}}" class="btn finish">finish</a></li>
+    <li><img src="{{user_avatar}}" width="30" height="30" style="border-radius:50%"> {{drink.name}} <a href="#" data-id="{{_id}}" class="btn finish">finish</a></li>
     {{/each}}
   </ul>
 </template>
