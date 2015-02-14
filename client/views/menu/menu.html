@@ -6,4 +6,31 @@
     <li>{{name}} <a href="#" data-id="{{_id}}" class="btn order">order</a></li>
     {{/each}}
   </ul>
+
+  {{> orderForm}}
+</template>
+
+<template name="orderForm">
+  <div id="order-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <form id="orders-form">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Order Drink</h3>
+      </div>
+
+      <div class="modal-body">
+        {{#with drink}}
+        <div>
+          <h4>Ordering: {{name}}</h4>
+        </div>
+        {{/with}}
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn cancel" data-dismiss="modal" aria-hidden="true">Cancel</button>
+        <button type="submit" class="btn btn-primary">Order</button>
+      </div>
+    </form>
+  </div>
 </template>
