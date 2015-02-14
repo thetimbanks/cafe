@@ -1,0 +1,14 @@
+<template name="profile">
+  <form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Name" value="{{profile.name}}">
+    </div>
+    <div class="form-group">
+      <label for="slack_username">Slack Username</label>
+      <input id="slack_username" name="slack_username" type="text" placeholder="Slack username" value="{{profile.slack_username}}">
+    </div>
+
+    <button type="submit" class="btn">Update profile</button>
+  </form>
+</template>
